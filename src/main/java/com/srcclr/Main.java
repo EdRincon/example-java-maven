@@ -1,10 +1,8 @@
 package com.srcclr;
 
-oiajsosjoasidj
 import org.apache.commons.fileupload.MultipartStream;
 import org.apache.xml.security.signature.XMLSignatureInput;
 import org.mindrot.jbcrypt.BCrypt;
-
 import java.io.ByteArrayInputStream;
 
 public class Main {
@@ -22,7 +20,7 @@ public class Main {
     byte[] bytes = new byte[256];
 
     new MultipartStream(new ByteArrayInputStream(bytes), bytes);
-
+    new MultipartStream(new ByteArrayInputStream(bytes), bytes);
     new XMLSignatureInput(bytes).addNodeFilter(null);
   }
 }

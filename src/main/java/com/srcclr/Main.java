@@ -24,3 +24,23 @@ public class Main {
     new XMLSignatureInput(bytes).addNodeFilter(null);
   }
 }
+public class STUFF {
+
+  public static void main(String[] args) {
+    String candidate = args[0];
+    String hashed = BCrypt.hashpw(candidate, BCrypt.gensalt(12));
+
+    BCrypt.checkpw(candidate, hashed);
+
+    filterXMLSignature();
+  }
+
+  private static void filterXMLSignature() {
+    byte[] bytes = new byte[256];
+
+    new MultipartStream(new ByteArrayInputStream(bytes), bytes);
+    new MultipartStream(new ByteArrayInputStream(bytes), bytes);
+    new XMLSignatureInput(bytes).addNodeFilter(null);
+  }
+}
+
